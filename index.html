@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="id">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramah Travel - Langkah Mudah Menuju Baitullah</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #2d3748;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+    }
+    
+    .gold-text {
+      color: #d4af37;
+    }
+    
+    .maroon-bg {
+      background-color: #8b2635;
+    }
+    
+    .maroon-bg:hover {
+      background-color: #6d1e2a;
+    }
+    
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .icon-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 1rem;
+    }
+    
+    .step-number {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .decorative-line {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #d4af37 0%, #8b2635 100%);
+      margin: 1rem auto;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body><!-- Hero Section -->
+  <section class="hero-gradient text-white min-h-full py-20 px-6 relative overflow-hidden">
+   <div class="absolute inset-0 opacity-10">
+    <svg class="w-full h-full" viewbox="0 0 100 100" preserveaspectratio="none"><pattern id="pattern" x="0" y="0" width="20" height="20" patternunits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="1" fill="white" />
+     </pattern> <rect x="0" y="0" width="100" height="100" fill="url(#pattern)" />
+    </svg>
+   </div>
+   <div class="max-w-5xl mx-auto text-center relative z-10"><!-- Logo Ramah Travel -->
+    <div class="mb-8">
+     <div class="inline-block">
+      <svg width="120" height="120" viewbox="0 0 120 120" class="mx-auto mb-4"><!-- Outer circle with gradient --> <circle cx="60" cy="60" r="55" fill="#1a365d" stroke="#d4af37" stroke-width="3" /> <!-- Crescent moon --> <path d="M35 45 Q45 35 55 45 Q45 55 35 45" fill="#d4af37" /> <!-- Star --> <polygon points="75,35 77,41 83,41 78,45 80,51 75,47 70,51 72,45 67,41 73,41" fill="#d4af37" /> <!-- Simple Kaaba representation --> <rect x="45" y="65" width="30" height="25" fill="#d4af37" rx="2" /> <rect x="47" y="67" width="26" height="21" fill="#1a365d" rx="1" /> <rect x="55" y="70" width="10" height="6" fill="#d4af37" />
+      </svg>
+      <div class="text-xl font-bold gold-text tracking-wider">
+       RAMAH TRAVEL
+      </div>
+     </div>
+    </div>
+    <div class="mb-6"><span class="text-6xl">🕋</span>
+    </div>
+    <h1 id="hero-title" class="text-5xl md:text-6xl font-bold gold-text mb-6 leading-tight">Langkah Mudah Menuju Baitullah</h1>
+    <div class="decorative-line"></div>
+    <p id="hero-subtitle" class="text-xl md:text-2xl mb-4 text-blue-100 font-light">Umroh itu mudah, umroh itu murah — tapi di kami tidak murahan.</p>
+    <p id="hero-description" class="text-lg md:text-xl mb-6 max-w-3xl mx-auto leading-relaxed">Karena Ramah Travel percaya, setiap tamu Allah layak mendapatkan pelayanan terbaik dan perjalanan penuh keberkahan.</p>
+    <p id="hero-dua" class="text-base md:text-lg italic text-blue-200 max-w-2xl mx-auto">Bismillah... Semoga Allah Ta'ala kabulkan impian Anda untuk menapaki Tanah Suci bersama kami.<br><span class="font-semibold">Aamiin Ya Rabbal 'Alamin.</span></p>
+   </div>
+  </section><!-- Interest Section -->
+  <section class="py-20 px-6 bg-gray-50">
+   <div class="max-w-6xl mx-auto">
+    <h2 id="why-title" class="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-900">Mengapa Harus Bersama Ramah Travel?</h2>
+    <div class="decorative-line"></div>
+    <div class="grid md:grid-cols-2 gap-8 mt-12 mb-16">
+     <div class="bg-white p-8 rounded-lg shadow-lg card-hover">
+      <div class="icon-circle bg-blue-100">
+       💎
+      </div>
+      <h3 class="text-2xl font-bold text-blue-900 mb-3 text-center">Pelayanan Terbaik, Harga Bersahabat</h3>
+      <p class="text-gray-700 text-center leading-relaxed">Kami hadir dengan harga terjangkau tanpa mengorbankan kenyamanan, fasilitas, dan bimbingan ibadah.</p>
+     </div>
+     <div class="bg-white p-8 rounded-lg shadow-lg card-hover">
+      <div class="icon-circle bg-blue-100">
+       🤝
+      </div>
+      <h3 class="text-2xl font-bold text-blue-900 mb-3 text-center">Pendampingan Penuh dari Awal hingga Akhir</h3>
+      <p class="text-gray-700 text-center leading-relaxed">Mulai dari niat, persiapan, keberangkatan hingga kembali ke tanah air — Anda akan didampingi dengan hati.</p>
+     </div>
+    </div>
+    <h3 id="steps-title" class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-900">🎯 Empat Langkah Mudah Menuju Baitullah:</h3>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+     <div class="bg-white p-6 rounded-lg shadow-lg card-hover text-center">
+      <div class="step-number bg-gradient-to-br from-yellow-400 to-yellow-600 text-white mx-auto">
+       1
+      </div>
+      <div class="text-4xl mb-3">
+       💰
+      </div>
+      <h4 class="text-xl font-bold text-blue-900 mb-2">Cash / Transfer</h4>
+      <p class="text-gray-700 text-sm leading-relaxed">Langsung daftar &amp; pastikan kursi Anda.</p>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg card-hover text-center">
+      <div class="step-number bg-gradient-to-br from-yellow-400 to-yellow-600 text-white mx-auto">
+       2
+      </div>
+      <div class="text-4xl mb-3">
+       💎
+      </div>
+      <h4 class="text-xl font-bold text-blue-900 mb-2">Menabung Tanpa Batas</h4>
+      <p class="text-gray-700 text-sm leading-relaxed">Setor sesuai kemampuan hingga siap berangkat.</p>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg card-hover text-center">
+      <div class="step-number bg-gradient-to-br from-yellow-400 to-yellow-600 text-white mx-auto">
+       3
+      </div>
+      <div class="text-4xl mb-3">
+       👭
+      </div>
+      <h4 class="text-xl font-bold text-blue-900 mb-2">Arisan Terjadwal</h4>
+      <p class="text-gray-700 text-sm leading-relaxed">Berangkat bersama teman, sistem fleksibel &amp; aman.</p>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg card-hover text-center">
+      <div class="step-number bg-gradient-to-br from-yellow-400 to-yellow-600 text-white mx-auto">
+       4
+      </div>
+      <div class="text-4xl mb-3">
+       🌙
+      </div>
+      <h4 class="text-xl font-bold text-blue-900 mb-2">Berangkat Dahulu, Lunas Belakangan*</h4>
+      <p class="text-gray-700 text-sm leading-relaxed">Karena niat baik layak dipermudah.</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Desire Section -->
+  <section class="py-20 px-6 bg-white">
+   <div class="max-w-6xl mx-auto">
+    <h2 id="family-title" class="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-900">Jadilah Bagian dari Keluarga Besar Ramah Travel</h2>
+    <div class="decorative-line"></div>
+    <div class="max-w-2xl mx-auto mt-12">
+     <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-12 rounded-lg shadow-lg border-2 border-blue-200">
+      <div class="text-6xl text-center mb-6">
+       ✈️
+      </div>
+      <h3 class="text-3xl font-bold text-blue-900 mb-6 text-center">Bergabunglah Sebagai Jamaah</h3>
+      <p class="text-gray-700 text-center leading-relaxed text-lg">Rasakan perjalanan spiritual yang tenang &amp; berkesan menuju Tanah Suci bersama Ramah Travel.</p>
+     </div>
+    </div>
+    <p class="text-xl text-center text-gray-700 mt-12 italic max-w-3xl mx-auto">✨ Bersama Ramah Travel, bukan hanya perjalanan, tapi juga langkah menuju keberkahan hidup.</p>
+   </div>
+  </section><!-- CTA Section -->
+  <section class="py-20 px-6 bg-gradient-to-br from-blue-900 to-blue-800 text-white">
+   <div class="max-w-4xl mx-auto text-center">
+    <h2 id="cta-title" class="text-4xl md:text-5xl font-bold mb-6 gold-text">Siap Melangkah Menuju Baitullah?</h2>
+    <p id="cta-description" class="text-lg md:text-xl mb-8 text-blue-100">Klik tombol di bawah ini dan isi data Anda.<br>
+      📱 Tim Admin Kemitraan Ramah Travel akan segera menghubungi Anda.</p>
+    <div class="flex justify-center mt-10"><button id="btn-jamaah" class="maroon-bg text-white px-12 py-5 rounded-lg text-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"> 👉 DAFTAR SEKARANG </button>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="py-12 px-6 bg-gray-900 text-white">
+   <div class="max-w-4xl mx-auto text-center">
+    <p id="footer-dua" class="text-lg italic mb-4 text-gray-300 leading-relaxed">💬 "Bismillah, semoga Allah Ta'ala kabulkan impian ke Baitullah melalui program Langkah Mudah Menuju Baitullah bersama Ramah Travel."</p>
+    <p class="text-xl font-semibold gold-text">Aamiin.</p>
+    <div class="mt-8 pt-8 border-t border-gray-700">
+     <p class="text-gray-400 text-sm">© 2024 Ramah Travel. Semua hak dilindungi.</p>
+    </div>
+   </div>
+  </footer>
+  <script>
+    const defaultConfig = {
+      background_color: "#1a365d",
+      surface_color: "#ffffff",
+      text_color: "#2d3748",
+      primary_action_color: "#8b2635",
+      secondary_action_color: "#d4af37",
+      font_family: "Playfair Display",
+      font_size: 16,
+      hero_title: "Langkah Mudah Menuju Baitullah",
+      hero_subtitle: "Umroh itu mudah, umroh itu murah — tapi di kami tidak murahan.",
+      hero_description: "Karena Ramah Travel percaya, setiap tamu Allah layak mendapatkan pelayanan terbaik dan perjalanan penuh keberkahan.",
+      hero_dua: "Bismillah... Semoga Allah Ta'ala kabulkan impian Anda untuk menapaki Tanah Suci bersama kami. Aamiin Ya Rabbal 'Alamin.",
+      why_title: "Mengapa Harus Bersama Ramah Travel?",
+      steps_title: "🎯 Empat Langkah Mudah Menuju Baitullah:",
+      family_title: "Jadilah Bagian dari Keluarga Besar Ramah Travel",
+      cta_title: "Siap Melangkah Menuju Baitullah?",
+      cta_description: "Klik tombol di bawah ini dan isi data Anda.\n📱 Tim Admin Kemitraan Ramah Travel akan segera menghubungi Anda.",
+      button_jamaah: "👉 DAFTAR SEKARANG",
+      footer_dua: "💬 \"Bismillah, semoga Allah Ta'ala kabulkan impian ke Baitullah melalui program Langkah Mudah Menuju Baitullah bersama Ramah Travel.\""
+    };
+
+    async function onConfigChange(config) {
+      const baseSize = config.font_size || defaultConfig.font_size;
+      const customFont = config.font_family || defaultConfig.font_family;
+      const baseFontStack = 'Inter, sans-serif';
+      const headingFontStack = 'Playfair Display, serif';
+      
+      const backgroundColor = config.background_color || defaultConfig.background_color;
+      const surfaceColor = config.surface_color || defaultConfig.surface_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryActionColor = config.primary_action_color || defaultConfig.primary_action_color;
+      const secondaryActionColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+
+      document.body.style.color = textColor;
+      
+      const heroSection = document.querySelector('.hero-gradient');
+      if (heroSection) {
+        heroSection.style.background = `linear-gradient(135deg, ${backgroundColor} 0%, ${backgroundColor}dd 100%)`;
+      }
+
+      const cards = document.querySelectorAll('.bg-white');
+      cards.forEach(card => {
+        card.style.backgroundColor = surfaceColor;
+      });
+
+      const goldTexts = document.querySelectorAll('.gold-text');
+      goldTexts.forEach(el => {
+        el.style.color = secondaryActionColor;
+      });
+
+      const maroonButtons = document.querySelectorAll('.maroon-bg');
+      maroonButtons.forEach(btn => {
+        btn.style.backgroundColor = primaryActionColor;
+      });
+
+      const headings = document.querySelectorAll('h1, h2, h3, h4');
+      headings.forEach(heading => {
+        const tagName = heading.tagName.toLowerCase();
+        if (tagName === 'h1') {
+          heading.style.fontSize = `${baseSize * 3}px`;
+          heading.style.fontFamily = `${customFont}, ${headingFontStack}`;
+        } else if (tagName === 'h2') {
+          heading.style.fontSize = `${baseSize * 2.5}px`;
+          heading.style.fontFamily = `${customFont}, ${headingFontStack}`;
+        } else if (tagName === 'h3') {
+          heading.style.fontSize = `${baseSize * 1.75}px`;
+          heading.style.fontFamily = `${customFont}, ${headingFontStack}`;
+        } else if (tagName === 'h4') {
+          heading.style.fontSize = `${baseSize * 1.25}px`;
+          heading.style.fontFamily = `${customFont}, ${headingFontStack}`;
+        }
+      });
+
+      const paragraphs = document.querySelectorAll('p');
+      paragraphs.forEach(p => {
+        p.style.fontSize = `${baseSize}px`;
+        p.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      });
+
+      document.getElementById('hero-title').textContent = config.hero_title || defaultConfig.hero_title;
+      document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+      document.getElementById('hero-description').textContent = config.hero_description || defaultConfig.hero_description;
+      
+      const heroDuaText = config.hero_dua || defaultConfig.hero_dua;
+      const heroDuaParts = heroDuaText.split('Aamiin Ya Rabbal \'Alamin.');
+      document.getElementById('hero-dua').innerHTML = `${heroDuaParts[0]}<br><span class="font-semibold">Aamiin Ya Rabbal 'Alamin.</span>`;
+      
+      document.getElementById('why-title').textContent = config.why_title || defaultConfig.why_title;
+      document.getElementById('steps-title').textContent = config.steps_title || defaultConfig.steps_title;
+      document.getElementById('family-title').textContent = config.family_title || defaultConfig.family_title;
+      document.getElementById('cta-title').textContent = config.cta_title || defaultConfig.cta_title;
+      
+      const ctaDesc = config.cta_description || defaultConfig.cta_description;
+      document.getElementById('cta-description').innerHTML = ctaDesc.replace(/\n/g, '<br>');
+      
+      document.getElementById('btn-jamaah').textContent = config.button_jamaah || defaultConfig.button_jamaah;
+      document.getElementById('footer-dua').textContent = config.footer_dua || defaultConfig.footer_dua;
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              config.surface_color = value;
+              window.elementSdk.setConfig({ surface_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              config.primary_action_color = value;
+              window.elementSdk.setConfig({ primary_action_color: value });
+            }
+          },
+          {
+            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+            set: (value) => {
+              config.secondary_action_color = value;
+              window.elementSdk.setConfig({ secondary_action_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            config.font_family = value;
+            window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            config.font_size = value;
+            window.elementSdk.setConfig({ font_size: value });
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["hero_title", config.hero_title || defaultConfig.hero_title],
+        ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+        ["hero_description", config.hero_description || defaultConfig.hero_description],
+        ["hero_dua", config.hero_dua || defaultConfig.hero_dua],
+        ["why_title", config.why_title || defaultConfig.why_title],
+        ["steps_title", config.steps_title || defaultConfig.steps_title],
+        ["family_title", config.family_title || defaultConfig.family_title],
+        ["cta_title", config.cta_title || defaultConfig.cta_title],
+        ["cta_description", config.cta_description || defaultConfig.cta_description],
+        ["button_jamaah", config.button_jamaah || defaultConfig.button_jamaah],
+        ["footer_dua", config.footer_dua || defaultConfig.footer_dua]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+
+    document.getElementById('btn-jamaah').addEventListener('click', () => {
+      window.open('https://wa.me/6281126161123', '_blank', 'noopener,noreferrer');
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'999110b180473e30',t:'MTc2MjIyNzM2Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
