@@ -102,8 +102,6 @@
       </div>
      </div>
     </div>
-    <div class="mb-6"><span class="text-6xl">🕋</span>
-    </div>
     <h1 id="hero-title" class="text-5xl md:text-6xl font-bold gold-text mb-6 leading-tight">Langkah Mudah Menuju Baitullah</h1>
     <div class="decorative-line"></div>
     <p id="hero-dua" class="text-base md:text-lg italic text-blue-200 max-w-2xl mx-auto">Bismillah... Semoga Allah Ta'ala kabulkan impian Anda untuk menapaki Tanah Suci bersama kami.<br><span class="font-semibold">Aamiin Ya Rabbal 'Alamin.</span></p>
@@ -213,8 +211,7 @@
       font_family: "Playfair Display",
       font_size: 16,
       hero_title: "Langkah Mudah Menuju Baitullah",
-      // Hapus: hero_subtitle: "Umroh itu mudah, umroh itu murah — tapi di kami tidak murahan.",
-      // Hapus: hero_description: "Karena Ramah Travel percaya, setiap tamu Allah layak mendapatkan pelayanan terbaik dan perjalanan penuh keberkahan.",
+      // hero_subtitle dan hero_description telah dihapus
       hero_dua: "Bismillah... Semoga Allah Ta'ala kabulkan impian Anda untuk menapaki Tanah Suci bersama kami. Aamiin Ya Rabbal 'Alamin.",
       why_title: "Mengapa Harus Bersama Ramah Travel?",
       steps_title: "🎯 Empat Langkah Mudah Menuju Baitullah:",
@@ -241,7 +238,7 @@
       
       const heroSection = document.querySelector('.hero-gradient');
       if (heroSection) {
-        heroSection.style.background = linear-gradient(135deg, ${backgroundColor} 0%, ${backgroundColor}dd 100%);
+        heroSection.style.background = `linear-gradient(135deg, ${backgroundColor} 0%, ${backgroundColor}dd 100%)`;
       }
 
       const cards = document.querySelectorAll('.bg-white');
@@ -263,24 +260,24 @@
       headings.forEach(heading => {
         const tagName = heading.tagName.toLowerCase();
         if (tagName === 'h1') {
-          heading.style.fontSize = ${baseSize * 3}px;
-          heading.style.fontFamily = ${customFont}, ${headingFontStack};
+          heading.style.fontSize = `${baseSize * 3}px`;
+          heading.style.fontFamily = `${customFont}, ${headingFontStack}`;
         } else if (tagName === 'h2') {
-          heading.style.fontSize = ${baseSize * 2.5}px;
-          heading.style.fontFamily = ${customFont}, ${headingFontStack};
+          heading.style.fontSize = `${baseSize * 2.5}px`;
+          heading.style.fontFamily = `${customFont}, ${headingFontStack}`;
         } else if (tagName === 'h3') {
-          heading.style.fontSize = ${baseSize * 1.75}px;
-          heading.style.fontFamily = ${customFont}, ${headingFontStack};
+          heading.style.fontSize = `${baseSize * 1.75}px`;
+          heading.style.fontFamily = `${customFont}, ${headingFontStack}`;
         } else if (tagName === 'h4') {
-          heading.style.fontSize = ${baseSize * 1.25}px;
-          heading.style.fontFamily = ${customFont}, ${headingFontStack};
+          heading.style.fontSize = `${baseSize * 1.25}px`;
+          heading.style.fontFamily = `${customFont}, ${headingFontStack}`;
         }
       });
 
       const paragraphs = document.querySelectorAll('p');
       paragraphs.forEach(p => {
-        p.style.fontSize = ${baseSize}px;
-        p.style.fontFamily = ${customFont}, ${baseFontStack};
+        p.style.fontSize = `${baseSize}px`;
+        p.style.fontFamily = `${customFont}, ${baseFontStack}`;
       });
 
       document.getElementById('hero-title').textContent = config.hero_title || defaultConfig.hero_title;
@@ -289,7 +286,7 @@
       
       const heroDuaText = config.hero_dua || defaultConfig.hero_dua;
       const heroDuaParts = heroDuaText.split('Aamiin Ya Rabbal \'Alamin.');
-      document.getElementById('hero-dua').innerHTML = ${heroDuaParts[0]}<br><span class="font-semibold">Aamiin Ya Rabbal 'Alamin.</span>;
+      document.getElementById('hero-dua').innerHTML = `${heroDuaParts[0]}<br><span class="font-semibold">Aamiin Ya Rabbal 'Alamin.</span>`;
       
       document.getElementById('why-title').textContent = config.why_title || defaultConfig.why_title;
       document.getElementById('steps-title').textContent = config.steps_title || defaultConfig.steps_title;
@@ -307,87 +304,4 @@
       return {
         recolorables: [
           {
-            get: () => config.background_color || defaultConfig.background_color,
-            set: (value) => {
-              config.background_color = value;
-              window.elementSdk.setConfig({ background_color: value });
-            }
-          },
-          {
-            get: () => config.surface_color || defaultConfig.surface_color,
-            set: (value) => {
-              config.surface_color = value;
-              window.elementSdk.setConfig({ surface_color: value });
-            }
-          },
-          {
-            get: () => config.text_color || defaultConfig.text_color,
-            set: (value) => {
-              config.text_color = value;
-              window.elementSdk.setConfig({ text_color: value });
-            }
-          },
-          {
-            get: () => config.primary_action_color || defaultConfig.primary_action_color,
-            set: (value) => {
-              config.primary_action_color = value;
-              window.elementSdk.setConfig({ primary_action_color: value });
-            }
-          },
-          {
-            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
-            set: (value) => {
-              config.secondary_action_color = value;
-              window.elementSdk.setConfig({ secondary_action_color: value });
-            }
-          }
-        ],
-        borderables: [],
-        fontEditable: {
-          get: () => config.font_family || defaultConfig.font_family,
-          set: (value) => {
-            config.font_family = value;
-            window.elementSdk.setConfig({ font_family: value });
-          }
-        },
-        fontSizeable: {
-          get: () => config.font_size || defaultConfig.font_size,
-          set: (value) => {
-            config.font_size = value;
-            window.elementSdk.setConfig({ font_size: value });
-          }
-        }
-      };
-    }
-
-    function mapToEditPanelValues(config) {
-      return new Map([
-        ["hero_title", config.hero_title || defaultConfig.hero_title],
-        // ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle], // Dihapus
-        // ["hero_description", config.hero_description || defaultConfig.hero_description], // Dihapus
-        ["hero_dua", config.hero_dua || defaultConfig.hero_dua],
-        ["why_title", config.why_title || defaultConfig.why_title],
-        ["steps_title", config.steps_title || defaultConfig.steps_title],
-        ["family_title", config.family_title || defaultConfig.family_title],
-        ["cta_title", config.cta_title || defaultConfig.cta_title],
-        ["cta_description", config.cta_description || defaultConfig.cta_description],
-        ["button_jamaah", config.button_jamaah || defaultConfig.button_jamaah],
-        ["footer_dua", config.footer_dua || defaultConfig.footer_dua]
-      ]);
-    }
-
-    if (window.elementSdk) {
-      window.elementSdk.init({
-        defaultConfig,
-        onConfigChange,
-        mapToCapabilities,
-        mapToEditPanelValues
-      });
-    }
-
-    document.getElementById('btn-jamaah').addEventListener('click', () => {
-      window.open('https://wa.me/6281126161123', '_blank', 'noopener,noreferrer');
-    });
-  </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'999110b180473e30',t:'MTc2MjIyNzM2Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>
+            get: () => config.background_color || defaultConfig
